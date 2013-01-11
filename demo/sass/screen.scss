@@ -3,7 +3,9 @@
 //===============================================================================
 @import "compass/css3";
 @import "_normalize.scss";
-@import "_noise-uris.scss";
+@import "_base-noise-uris.scss";
+@import "_dark-noise-uris.scss";
+@import "_light-noise-uris.scss";
 
 //===============================================================================
 // §FONTS
@@ -46,7 +48,7 @@ body{
   height: 100%;
   @include background-image(radial-gradient(75% 0%, hsla(220,100,50,.15), hsla(300,100,50,.15)),
                             radial-gradient(0% 75%, hsla(0,100,50,.15), hsla(150,100,50,.15)),
-                            radial-gradient(25% 0%, hsla(330,100,50,.15), hsla(100,100,50,.15)),
+                            radial-gradient(25% 0%, hsla(0,100,50,.10), hsla(250,100,50,.10)),
                             radial-gradient(0% 25%, hsla(200,100,50,.15), hsla(0,100,50,.15)),
                             radial-gradient(50% 50%, hsla(60,100,50,.3), hsla(190,100,50,.5))
   );
@@ -60,7 +62,7 @@ body{
     left: 0;
     right: 0;
 
-    background-image: url($noise-light-3);
+    background-image: url($noise-light-020);
   }
 }
 
