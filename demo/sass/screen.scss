@@ -56,7 +56,7 @@ body{
 
   &:before{
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -67,10 +67,49 @@ body{
 }
 
 .wrap{
-  
+
 }
 
 
+.block{
+  width: 90%;
+  max-width: 40em;
+  background: white;
+  margin: 3em auto 3em;
+  padding: 1em;
+  position: relative;
+  background-image: url($base-noise-005);
+
+  @include border-radius(.3em);
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .15;
+
+    @include border-radius(.35em);
+    @include box-shadow(black 7px 7px 0 1px,
+                        black 6px 6px 0 1px,
+                        black 5px 5px 0 1px,
+                        black 4px 4px 0 1px,
+                        black 3px 3px 0 1px,
+                        black 2px 2px 0 1px,
+                        black 1px 1px
+    );
+  }
+}
+
+.logo{
+  margin: 0 auto;
+  width: 30em;
+  max-width: 90%;
+  display: block;
+  margin-bottom: -2.5%;
+}
 
 
 
