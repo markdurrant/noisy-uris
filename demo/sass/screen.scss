@@ -39,77 +39,190 @@
 //===============================================================================
 // ~GENERAL-STYLES
 //===============================================================================
-
-html{
-  height: 100%;
+body{
+  padding: 3em;
 }
 
-body{
-  height: 100%;
-  @include background-image(radial-gradient(75% 0%, hsla(220,100,50,.15), hsla(300,100,50,.15)),
-                            radial-gradient(0% 75%, hsla(0,100,50,.15), hsla(150,100,50,.15)),
-                            radial-gradient(25% 0%, hsla(0,100,50,.10), hsla(250,100,50,.10)),
-                            radial-gradient(0% 25%, hsla(200,100,50,.15), hsla(0,100,50,.15)),
-                            radial-gradient(50% 50%, hsla(60,100,50,.3), hsla(190,100,50,.5))
-  );
-  position: relative;
+ul{
+  margin: 0 0 3em;
+  padding: 0;
+  width: 28em;
+  list-style: none;
 
-  &:before{
+  &:after{
     content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    background-image: url($noise-light-020);
+    display: table;
+    clear: both;
   }
 }
 
-.wrap{
-
-}
-
-
-.block{
-  width: 90%;
-  max-width: 40em;
-  background: white;
-  margin: 3em auto 3em;
-  padding: 1em;
-  position: relative;
-  background-image: url($base-noise-005);
+li{
+  background-color: hsl(0,0,50);
+  width: 3em;
+  height: 3em;
+  margin: 1em;
+  float: left;
 
   @include border-radius(.3em);
+}
 
-  &:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: .15;
+.base li{
 
-    @include border-radius(.35em);
-    @include box-shadow(black 7px 7px 0 1px,
-                        black 6px 6px 0 1px,
-                        black 5px 5px 0 1px,
-                        black 4px 4px 0 1px,
-                        black 3px 3px 0 1px,
-                        black 2px 2px 0 1px,
-                        black 1px 1px
-    );
+  &:nth-child(1){
+    background-image: url($base-noise-100);
+  }
+
+  &:nth-child(2){
+    background-image: url($base-noise-090);
+  }
+  
+  &:nth-child(3){
+    background-image: url($base-noise-080);
+  }
+  
+  &:nth-child(4){
+    background-image: url($base-noise-070);
+  }
+
+  &:nth-child(5){
+    background-image: url($base-noise-060);
+  }
+
+  &:nth-child(6){
+    background-image: url($base-noise-050);
+  }
+
+  &:nth-child(7){
+    background-image: url($base-noise-040);
+  }
+
+  &:nth-child(8){
+    background-image: url($base-noise-030);
+  }
+  
+  &:nth-child(9){
+    background-image: url($base-noise-020);
+  }
+  
+  &:nth-child(10){
+    background-image: url($base-noise-010);
+  }
+
+  &:nth-child(11){
+    background-image: url($base-noise-005);
+  }
+
+  &:nth-child(12){
+    background-image: url($base-noise-004);
+  }
+
+  &:nth-child(13){
+    background-image: url($base-noise-003);
+  }
+
+  &:nth-child(14){
+    background-image: url($base-noise-002);
+  }
+
+  &:nth-child(15){
+    background-image: url($base-noise-001);
   }
 }
 
-.logo{
-  margin: 0 auto;
-  width: 30em;
-  max-width: 90%;
-  display: block;
-  margin-bottom: -2.5%;
+.dark li{
+
+  &:nth-child(1){
+    background-image: url($dark-noise-100);
+  }
+
+  &:nth-child(2){
+    background-image: url($dark-noise-090);
+  }
+  
+  &:nth-child(3){
+    background-image: url($dark-noise-080);
+  }
+  
+  &:nth-child(4){
+    background-image: url($dark-noise-070);
+  }
+
+  &:nth-child(5){
+    background-image: url($dark-noise-060);
+  }
+
+  &:nth-child(6){
+    background-image: url($dark-noise-050);
+  }
+
+  &:nth-child(7){
+    background-image: url($dark-noise-040);
+  }
+
+  &:nth-child(8){
+    background-image: url($dark-noise-030);
+  }
+  
+  &:nth-child(9){
+    background-image: url($dark-noise-020);
+  }
+  
+  &:nth-child(10){
+    background-image: url($dark-noise-010);
+  }
+
+  &:nth-child(11){
+    background-image: url($dark-noise-005);
+  }
 }
+
+.light li{
+
+  &:nth-child(1){
+    background-image: url($light-noise-100);
+  }
+
+  &:nth-child(2){
+    background-image: url($light-noise-090);
+  }
+  
+  &:nth-child(3){
+    background-image: url($light-noise-080);
+  }
+  
+  &:nth-child(4){
+    background-image: url($light-noise-070);
+  }
+
+  &:nth-child(5){
+    background-image: url($light-noise-060);
+  }
+
+  &:nth-child(6){
+    background-image: url($light-noise-050);
+  }
+
+  &:nth-child(7){
+    background-image: url($light-noise-040);
+  }
+
+  &:nth-child(8){
+    background-image: url($light-noise-030);
+  }
+  
+  &:nth-child(9){
+    background-image: url($light-noise-020);
+  }
+  
+  &:nth-child(10){
+    background-image: url($light-noise-010);
+  }
+
+  &:nth-child(11){
+    background-image: url($light-noise-005);
+  }
+}
+
 
 
 
