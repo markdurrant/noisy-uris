@@ -17,7 +17,7 @@ To use the noisy URIs with Sass first import one of the .scss files to your styl
 ### LESS
 To use the noisy URIs with LESS first import one of the .less files to your stylesheet with `@import`. You can then use the noisy URIs variables in your stylesheet. For example…
 
-```less
+```sass
 @import "base_noise_uris.less";
 
 .noise{
