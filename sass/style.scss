@@ -347,7 +347,22 @@ h2{
   }
 }
 
+.fork{
+  display: block;
+  position: absolute;
+  top: 3em;
+  right: -3em;
+  padding: .5em 3em;
+  color: white;
+  background-color: hsl(20,100,50);
 
+  @include transform(rotate(45deg));
+
+  &:hover{
+    color: white;
+    background-color: hsl(15,100,50);    
+  }
+}
 
 
 
