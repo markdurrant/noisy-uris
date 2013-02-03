@@ -1,4 +1,4 @@
-# Noisy Uris
+# Noisy URIs
 
 Ready-made noise images as data URIs. Available in [Sass](http://sass-lang.com/), [LESS](http://lesscss.org/), and vanilla CSS flavours.
 
@@ -9,7 +9,7 @@ To use the noisy URIs with Sass first import one of the .scss files to your styl
 @import "_base_noise_uris.scss";
 
 .noise{
-	background-image: url($base-noise-050);
+  background-image: url($base-noise-050);
 }
 ```
 
@@ -21,7 +21,7 @@ To use the noisy URIs with LESS first import one of the .less files to your styl
 @import "base_noise_uris.less";
 
 .noise{
-	background-image: url(@base-noise-050);
+  background-image: url(@base-noise-050);
 }
 ```
 
