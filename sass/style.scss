@@ -1,10 +1,12 @@
 //===============================================================================
 // ~IMPORTS
 //===============================================================================
-// import compass css3 mixins
 @import "compass/css3";
-//import css normalize from http://necolas.github.com/normalize.css/
 @import "_normalize.scss";
+
+@import "_base-noise-uris.scss";
+@import "_dark-noise-uris.scss";
+@import "_light-noise-uris.scss";
 
 //===============================================================================
 // §FONTS
@@ -29,4 +31,269 @@
 *{
   @include box-sizing(border-box);
   -webkit-font-smoothing: antialiased;
+}
+
+html,
+body{
+  width: 100%;
+  height: 140em;
+}
+
+body{
+  font-family: sans-serif; 
+  line-height: 1.4;
+  color: hsl(0,0,10);
+
+  @include background-image(
+    linear-gradient(45deg, hsl(220,100,75), hsl(320,100,75))
+  );
+}
+
+.noise{
+  background-image: url($light-noise-040);
+  width: 100%;
+  height: 140em;
+}
+
+.wrap{
+  position: absolute;
+  top: 5em;
+  left: 50%;
+  margin-left: -20em;
+  padding: 2em;
+  width: 40em;
+  background-color: white;
+
+  @include border-radius(.3em);
+}
+
+h3{
+  margin: 2.5em 0 -.2em;
+  line-height: 1;
+  font-size: 2em;
+  color: hsl(0,0,20);
+}
+
+.code{
+  background-color: hsl(0,0,90);
+  font-weight: bold;
+  color: black;
+  padding: .1em .3em .2em;
+
+  @include border-radius(.3em);
+}
+
+a{
+  color: hsl(220,100,50);
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover{
+    color: hsl(220,100,35);
+  }
+}
+
+pre{
+  background-color: hsl(0,0,25);
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+
+  @include border-radius(.3em);
+}
+
+h1{
+  margin: 0;
+  font-size: 4em;
+}
+
+h1,
+.intro{
+  text-align: center;
+  color: hsl(0,0,20);
+}
+
+.intro{
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+p{
+  font-size: 1.1em;
+}
+
+.created{
+  text-align: center;
+  font-size: .9em;
+  color: hsl(0,0,40);
+  margin: 10em 0 -.25em;
+}
+
+ul,
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.base_example li{
+  background-color: hsl(200,100,50);
+  width: 10%;
+  height: 5em;
+  float: left;
+  border: 2px solid white;
+
+  background-image: url($base_noise_100);
+
+  &:nth-child(2){
+    background-image: url($base_noise_090);
+  }
+
+  &:nth-child(3){
+    background-image: url($base_noise_080);
+  }
+
+  &:nth-child(4){
+    background-image: url($base_noise_070);
+  }
+
+  &:nth-child(5){
+    background-image: url($base_noise_060);
+  }
+
+  &:nth-child(6){
+    background-image: url($base_noise_050);
+  }
+
+  &:nth-child(7){
+    background-image: url($base_noise_040);
+  }
+
+  &:nth-child(8){
+    background-image: url($base_noise_030);
+  }
+
+  &:nth-child(9){
+    background-image: url($base_noise_020);
+  }
+
+  &:nth-child(10){
+    background-image: url($base_noise_010);
+  }
+}
+
+.labels{
+  position: relative;
+  left: -.5em;
+}
+
+.labels li{
+  margin-top: .5em;
+  width: 10%;
+  text-align: right;
+  float: left;
+  @include transform(rotate(45deg));
+}
+
+.light_example li{
+  background-color: hsl(200,100,50);
+  width: 10%;
+  height: 5em;
+  float: left;
+  border: 2px solid white;
+
+  background-image: url($light_noise_100);
+
+  &:nth-child(2){
+    background-image: url($light_noise_090);
+  }
+
+  &:nth-child(3){
+    background-image: url($light_noise_080);
+  }
+
+  &:nth-child(4){
+    background-image: url($light_noise_070);
+  }
+
+  &:nth-child(5){
+    background-image: url($light_noise_060);
+  }
+
+  &:nth-child(6){
+    background-image: url($light_noise_050);
+  }
+
+  &:nth-child(7){
+    background-image: url($light_noise_040);
+  }
+
+  &:nth-child(8){
+    background-image: url($light_noise_030);
+  }
+
+  &:nth-child(9){
+    background-image: url($light_noise_020);
+  }
+
+  &:nth-child(10){
+    background-image: url($light_noise_010);
+  }
+}
+
+.dark_example li{
+  background-color: hsl(200,100,50);
+  width: 10%;
+  height: 5em;
+  float: left;
+  border: 2px solid white;
+
+  background-image: url($dark_noise_100);
+
+  &:nth-child(2){
+    background-image: url($dark_noise_090);
+  }
+
+  &:nth-child(3){
+    background-image: url($dark_noise_080);
+  }
+
+  &:nth-child(4){
+    background-image: url($dark_noise_070);
+  }
+
+  &:nth-child(5){
+    background-image: url($dark_noise_060);
+  }
+
+  &:nth-child(6){
+    background-image: url($dark_noise_050);
+  }
+
+  &:nth-child(7){
+    background-image: url($dark_noise_040);
+  }
+
+  &:nth-child(8){
+    background-image: url($dark_noise_030);
+  }
+
+  &:nth-child(9){
+    background-image: url($dark_noise_020);
+  }
+
+  &:nth-child(10){
+    background-image: url($dark_noise_010);
+  }
+}
+
+h2{
+  margin: 1.5em 0 .25em 2px;
+  color: hsl(0,0,20)
 }
