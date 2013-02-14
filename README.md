@@ -7,6 +7,11 @@ Data URIs (unique resource identifiers) are resources (such as images) converted
 
 Repeating noise images are very useful for adding a little texture to all kinds on element on a web page. When you're designing in Photoshop it's simple to adjust the opacity and brightness of your noise textures, however within CSS it's not that easy. Noisy URIs was created to let people who 'design in the browser' a quick and flexible way to design with noise textures.
 
+### Example
+Basic noise example. Light and dark noise images are also provided.
+
+![noisy URIs example](http://markdurrant.github.com/noisy-uris/example.png)
+
 ### Usage
 #### Sass
 To use the noisy URIs with Sass first import one of the .scss files to your stylesheet with `@import`. You can then use the noisy URIs variables in your stylesheet. For example…
