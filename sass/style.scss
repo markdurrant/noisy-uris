@@ -43,7 +43,7 @@
 html,
 body{
   width: 100%;
-  height: 140em;
+  height: 200em;
 }
 
 body{
@@ -52,14 +52,14 @@ body{
   color: hsl(0,0,10);
 
   @include background-image(
-    linear-gradient(45deg, hsl(220,100,75), hsl(320,100,75))
+    linear-gradient(45deg, hsl(320,100,70), hsl(20,100,70))
   );
 }
 
 .noise{
-  background-image: url($light-noise-040);
+  background-image: url($light-noise-050);
   width: 100%;
-  height: 140em;
+  height: 200em;
 }
 
 .wrap{
@@ -74,11 +74,19 @@ body{
   @include border-radius(.3em);
 }
 
+h2,
 h3{
-  margin: 2.5em 0 -.2em;
-  line-height: 1;
-  font-size: 2em;
-  color: hsl(0,0,20);
+  margin-bottom: .2em;
+  color: hsl(0,0,20)
+}
+
+h2{
+  margin-top: 2em;
+}
+
+h3{
+  margin-top: .2em;
+  margin-bottom: .2em;
 }
 
 .code{
@@ -105,6 +113,7 @@ pre{
   color: white;
   font-weight: bold;
   padding: 1em;
+  margin-bottom: 3em;
 
   @include border-radius(.3em);
 }
@@ -140,6 +149,7 @@ h1,
 
 p{
   font-size: 1.1em;
+  margin-top: 0;
 }
 
 .created{
@@ -162,13 +172,38 @@ ul:after{
   clear: both;
 }
 
-.base_example li{
+.examples{
+  margin-top: 3em;
+
+  h2{
+    margin: .75em 0 0;
+  }
+}
+
+.examples_img li{
   background-color: hsl(20,100,50);
   width: 10%;
-  height: 5em;
+  height: 3.6em;
   float: left;
   border: 2px solid white;
 
+  @include border-radius(.3em);
+}
+
+.labels{
+  position: relative;
+  left: -.5em;
+}
+
+.labels li{
+  margin-top: .5em;
+  width: 10%;
+  text-align: right;
+  float: left;
+  @include transform(rotate(45deg));
+}
+
+.base_example li{
   background-image: url($base_noise_100);
 
   &:nth-child(2){
@@ -208,26 +243,7 @@ ul:after{
   }
 }
 
-.labels{
-  position: relative;
-  left: -.5em;
-}
-
-.labels li{
-  margin-top: .5em;
-  width: 10%;
-  text-align: right;
-  float: left;
-  @include transform(rotate(45deg));
-}
-
 .light_example li{
-  background-color: hsl(20,100,50);
-  width: 10%;
-  height: 5em;
-  float: left;
-  border: 2px solid white;
-
   background-image: url($light_noise_100);
 
   &:nth-child(2){
@@ -268,12 +284,6 @@ ul:after{
 }
 
 .dark_example li{
-  background-color: hsl(20,100,50);
-  width: 10%;
-  height: 5em;
-  float: left;
-  border: 2px solid white;
-
   background-image: url($dark_noise_100);
 
   &:nth-child(2){
@@ -313,11 +323,6 @@ ul:after{
   }
 }
 
-h2{
-  margin: 1.5em 0 .25em 2px;
-  color: hsl(0,0,20)
-}
-
 .twitter{
 
   &:before{
@@ -350,17 +355,21 @@ h2{
 .fork{
   display: block;
   position: absolute;
+  z-index: 999;
   top: 3em;
   right: -3em;
   padding: .5em 3em;
-  color: white;
-  background-color: hsl(20,100,50);
+  color: hsl(20,100,50);
+  background-color: white;
 
   @include transform(rotate(45deg));
 
   &:hover{
-    color: white;
-    background-color: hsl(15,100,50);    
+    color: hsl(20,100,50);
+  }
+
+  a{
+    @include border-radius(100em);
   }
 }
 
