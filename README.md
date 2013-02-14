@@ -9,7 +9,7 @@ Repeating noise images are very useful for adding a little texture to all kinds 
 
 ### Example
 Basic noise example. Light and dark noise images are also provided. 
-![noisy URIs example](example.png)
+![noisy URIs example](http://markdurrant.github.com/noisy-uris/example.png)
 
 ### Usage
 #### Sass
