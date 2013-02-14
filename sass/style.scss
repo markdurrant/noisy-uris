@@ -52,12 +52,12 @@ body{
   color: hsl(0,0,10);
 
   @include background-image(
-    linear-gradient(45deg, hsl(320,100,70), hsl(20,100,70))
+    linear-gradient(45deg, hsl(340,80,70), hsl(40,100,65))
   );
 }
 
 .noise{
-  background-image: url($light-noise-050);
+  background-image: url($light-noise-040);
   width: 100%;
   height: 200em;
 }
